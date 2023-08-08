@@ -7,7 +7,7 @@ const Movie = require('../models/Movie.model');
 
 const celebritySchema = new mongoose.Schema({
    name: String,
-   ocuppation: String,
+   occupation: String,
    catchPhrase: {
     type: String, 
     required: true,
