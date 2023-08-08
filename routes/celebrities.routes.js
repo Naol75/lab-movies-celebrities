@@ -10,6 +10,7 @@ router.get('/', async (req, res, next) => {
     try {
         const celebrities = await Celebrity.find();
         res.render('celebrities/celebrities', {celebrities})
+        console.log(celebrities)
     } catch (error) {
         next(error)
     }
