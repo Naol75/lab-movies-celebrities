@@ -7,12 +7,11 @@
 <p>Plot: {{movie.plot}}</p>
 
 {{#each movie.cast}}
-
-<li style="list-style-type: none;" >
 <p>{{this.name}} - {{this.occupation}} - {{this.catchPhrase}}</p>
-
-</li>
-
 {{/each}}
+
+<form action="/movies/{{movie._id}}/delete" method="post"> 
+<button type="submit">Delete</button>
+</form>
 
 </div>

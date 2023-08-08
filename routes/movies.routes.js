@@ -52,4 +52,14 @@ router.get('/:id', async (req, res, next) => {
     }
 })
 
+//Delete a specific movie
+router.post('/:id/delete', async (req, res, next) => {
+    try {
+      await Movie.findByIdAndRemove(req.params.id)
+      res.redirect('/movies')
+      console.log("película eliminada")
+    } catch (error) {
+      next(error)
+    }
+})
 module.exports = router;
